@@ -1,0 +1,39 @@
+[
+    {
+        "id": 0,
+        "name": "Hanoi",
+        "lat": 21.028511,
+        "lng": 105.804817,
+        "state": "Hanoi"    
+    },
+
+    
+    {
+        "id": 1,
+        "name": "Saigon",
+        "lat": 10.762622,
+        "lng": 106.660172,
+        "state": "Saigon"    
+    },
+
+    
+    {
+        "id": 2,
+        "name": "Danang",
+        "lat": 16.047079,
+        "lng": 108.206230,
+        "state": "Danang"    
+    },
+
+    
+    {
+        "id": 3,
+        "name": "Hue",
+        "lat": 16.461109,
+        "lng": 107.570183,
+        "state": "Hue"    
+    }
+
+
+
+]

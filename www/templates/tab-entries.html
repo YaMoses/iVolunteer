@@ -1,0 +1,45 @@
+<ion-app>
+
+   <link rel="stylesheet" md-href="css/styles.css">
+
+      <ion-view view-title="iVolunteer">
+  
+  <ion-pane>
+
+<div class="bar bar-header bar-calm">
+  <button class="button button-icon icon ion-minus-circled button-clear" ng-click="data.showDelete = !data.showDelete"></button>
+  <div class="h1 title">iVolunteer</div>
+  
+</div> 
+      <ion-content ng-controller="EntriesCtrl">
+
+         <ion-refresher on-refresh="loadData()"
+                             pulling-text="Pull to refresh..."
+                             refreshing-text="Refreshing!"
+                             refreshing-icon="ion-loading-c">
+          </ion-refresher>
+        
+      <div class="item-input-inset bar-light">
+        <label class="item-input-wrapper">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" ng-model="query" placeholder="Search">
+        </label>
+      </div>    
+
+        <ion-list show-delete="data.showDelete">
+          <ion-item ng-repeat="item in alldata | filter: query" href="#/tab/entries/{{item.id}}" >
+                  <h3>{{item.vname}}</h3>
+                  <p>{{item.report}}</p>
+                  <h4>{{item.dateOfEntry}} - {{item.location}}</h4>
+                  <h5>Completed: {{item.status}}</h5>
+   <a class="button icon-right ion-chevron-right button-calm"  href="#/tab/entries/{{item.id}}" >More</a>
+   <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)">
+   
+   </ion-delete-button>
+          </ion-item>
+        </ion-list>   
+      </ion-content>       
+  </ion-pane>
+ 
+</ion-view>
+</ion-app>

@@ -1,0 +1,82 @@
+
+<ion-app>
+
+ <link rel="stylesheet" md-href="css/styles.css">
+
+<ion-view view-title="iVolunteer">
+  
+   <ion-pane>
+     <div class="bar bar-header bar-calm">
+ 
+  <div class="h1 title">iVolunteer</div>
+ 
+</div> 
+      
+      <ion-content ng-controller="CreateCtrl">
+        <div class="table1">
+         
+          <form name="form1" novalidate>
+            <label class="item item-input">
+              <input type="text" placeholder="Name of the volunteer  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; required" ng-model="name"  ng-model-options="{updateOn:'blur'}" required/> 
+            </label>
+           
+
+            <label class="item item-input">
+              <input type="text" placeholder="volunteering activity name  &nbsp; &nbsp; &nbsp; &nbsp; required" ng-model="vname" ng-model-options="{updateOn:'blur'}" required/>
+            </label>
+
+            
+            <label class = "item item-input item-select">
+               <div class = "input-label">
+                  select a location
+               </div>
+              
+               <select ng-model="location">
+                  <option value="Hanoi">Hanoi</option>
+                  <option value="Saigon">Saigon</option>
+                  <option value="Danang">Danang</option>
+                  <option value="Hue">Hue</option>
+               </select>
+            </label>
+
+             <label class="item item-input">
+              <input type="date" placeholder="date   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; required" ng-model="dateOfEntry" ng-model-options="{updateOn:'blur'}" required/>
+            </label>
+          
+
+           <!--  <label class="item item-input">
+              <input type="text" placeholder="Time spent" ng-model="timeSpent">
+            </label> -->
+
+          <label class = "item range range-stable">
+        <span class="input-label filter-range-span">Time(hrs): {{timeSpent}}</span>
+        <input class="filter-range" type="range" name="timeSpent" min="1" max="24" value="7" ng-model="timeSpent" style='margin-right: 30px;'>
+      </label>
+
+             <label class="item item-input">
+              <textarea placeholder="report" rows="4" ng-model="report"></textarea>
+            </label>
+
+            <label class = "item item-input item-select">
+               <div class = "input-label">
+                  completed?
+               </div>
+              
+               <select ng-model="status">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+               </select>
+            </label>
+
+            
+          
+            
+            <button class="button button-block button-positive" ng-click="showConfirm()"  ng-disabled="form1.$invalid">Add</button>
+          </form>
+        </div>
+
+          
+   </ion-pane>
+ 
+</ion-view>
+</ion-app>

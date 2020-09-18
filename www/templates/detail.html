@@ -1,0 +1,32 @@
+  <div class="bar bar-header bar-calm">
+  <button class="button button-icon icon ion-android-arrow-back button-dark button-clear" ng-Click="myGoBack()"></button>
+  <div class="h1 title">iVolunteer</div>
+
+</div> 
+
+<ion-view>
+	<ion-content>
+		  <ion-refresher on-refresh="loadData()"
+                             pulling-text="Pull to refresh..."
+                             refreshing-text="Refreshing!"
+                             refreshing-icon="ion-loading-c">
+          </ion-refresher>
+          
+		<ion-list class="list-inset">
+       
+		
+			<ion-item class="item-text-wrap"
+				ng-repeat="item in alldata | filter: { id : whichEntries}">
+
+                <!-- <button ion-button icon-end ng-Click="shareAnyWhere()">
+                       Share
+                    <ion-icon name="email"></ion-icon>
+                </button> -->
+
+				<h2>{{item.vname}}</h2>
+				<h3>{{item.dateOfEntry}} | {{item.location}}</h3>
+				<p>{{item.report}}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

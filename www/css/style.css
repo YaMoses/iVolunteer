@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+
+form input.ng-invalid:not(.ng-pristine) {
+    box-shadow: 0px 0px 40px rgba(220,20,60, 0.9);
+}
+
+/*.error-message {
+    padding: 12px;
+    background-color: rgba(255,0,0, 0.9);
+    font-weight: bold;*/
+}
+
+.deemphasized { color: #444; font-size: 0.9em; }
+
+
+.leafletMap {
+	width: 100vw;
+	height: 100vh;
+}
